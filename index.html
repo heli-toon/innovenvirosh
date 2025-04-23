@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnovEnviroSH - Professional Landscaping Services</title>
+  <meta name="description" content="InnovEnviroSH specializes in interior and exterior landscaping installations and maintenance, with a focus on fire and electrical safety.">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="font-sans text-gray-800 overflow-x-hidden">
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 md:px-8">
+      <nav class="flex items-center justify-between py-4">
+        <a href="#hero" class="flex items-center text-white">
+          <i class="bi bi-tree-fill text-2xl mr-2 text-accent"></i>
+          <span class="font-heading font-bold text-xl md:text-2xl">InnovEnviroSH</span>
+        </a>
+        
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="#about" class="text-white hover:text-accent transition-colors font-medium">About</a>
+          <a href="#services" class="text-white hover:text-accent transition-colors font-medium">Services</a>
+          <a href="#gallery" class="text-white hover:text-accent transition-colors font-medium">Gallery</a>
+          <a href="#testimonials" class="text-white hover:text-accent transition-colors font-medium">Testimonials</a>
+          <a href="#before-after" class="text-white hover:text-accent transition-colors font-medium">Before & After</a>
+          <a href="#contact" class="bg-accent hover:bg-accent-dark text-white font-medium py-2 px-6 rounded-md transition-all">Contact Us</a>
+        </div>
+        
+        <button id="mobileMenuBtn" class="lg:hidden text-white text-2xl focus:outline-none">
+          <i class="bi bi-list"></i>
+        </button>
+      </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden bg-primary hidden">
+      <div class="container mx-auto px-4 py-6 space-y-4">
+        <a href="#about" class="block text-white hover:text-accent transition-colors font-medium py-2">About</a>
+        <a href="#services" class="block text-white hover:text-accent transition-colors font-medium py-2">Services</a>
+        <a href="#gallery" class="block text-white hover:text-accent transition-colors font-medium py-2">Gallery</a>
+        <a href="#testimonials" class="block text-white hover:text-accent transition-colors font-medium py-2">Testimonials</a>
+        <a href="#before-after" class="block text-white hover:text-accent transition-colors font-medium py-2">Before & After</a>
+        <a href="#contact" class="block bg-accent hover:bg-accent-dark text-white font-medium py-2 px-6 rounded-md transition-all w-full text-center mt-4">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen-85 bg-hero-pattern bg-cover bg-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-primary/60"></div>
+      <div class="relative h-full flex items-center">
+        <div class="container mx-auto px-4 md:px-8">
+          <div class="max-w-2xl" data-aos="fade-up">
+            <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">Transform Your Space With Professional Landscaping</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-xl">Bringing nature's beauty to your environment with expert interior and exterior landscaping services.</p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <a href="#services" class="bg-accent hover:bg-accent-dark text-white text-center font-semibold py-3 px-8 rounded-md transition-all">
+                Our Services
+              </a>
+              <a href="#contact" class="bg-white hover:bg-gray-100 text-primary text-center font-semibold py-3 px-8 rounded-md transition-all">
+                Get a Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg class="fill-white w-full h-auto" viewBox="0 0 1920 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,120 L1920,120 L1920,0 C1200,80 720,80 0,0 L0,120 Z" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">About InnovEnviroSH</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">We specialize in creating beautiful, sustainable landscapes that enhance the value and enjoyment of your property.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div data-aos="fade-right">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/589/garden-gardening-grass-trees.jpg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Landscaping work" class="w-full h-auto rounded-lg shadow-card">
+              <div class="absolute -bottom-6 -right-6 bg-accent-light p-4 rounded-lg shadow-lg hidden md:block">
+                <p class="text-white font-heading font-bold text-xl">15+ Years</p>
+                <p class="text-white">of Experience</p>
+              </div>
+            </div>
+          </div>
+          
+          <div data-aos="fade-left">
+            <h3 class="font-heading font-semibold text-2xl md:text-3xl text-gray-900 mb-4">We Create Beautiful & Functional Outdoor Spaces</h3>
+            <p class="text-gray-600 mb-6">InnovEnviroSH is a premier landscaping company dedicated to transforming ordinary spaces into extraordinary environments. With over 15 years of experience, we've established ourselves as leaders in the industry, offering comprehensive landscaping solutions for residential and commercial clients.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div class="flex items-start">
+                <i class="bi bi-check-circle-fill text-accent text-xl mt-1 mr-2"></i>
+                <div>
+                  <h4 class="font-heading font-medium text-gray-900">Expert Team</h4>
+                  <p class="text-sm text-gray-600">Skilled professionals with industry certification</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="bi bi-check-circle-fill text-accent text-xl mt-1 mr-2"></i>
+                <div>
+                  <h4 class="font-heading font-medium text-gray-900">Quality Materials</h4>
+                  <p class="text-sm text-gray-600">We use only premium products and plants</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="bi bi-check-circle-fill text-accent text-xl mt-1 mr-2"></i>
+                <div>
+                  <h4 class="font-heading font-medium text-gray-900">Safety Focus</h4>
+                  <p class="text-sm text-gray-600">Fire and electrical safety compliant designs</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="bi bi-check-circle-fill text-accent text-xl mt-1 mr-2"></i>
+                <div>
+                  <h4 class="font-heading font-medium text-gray-900">Maintenance Plans</h4>
+                  <p class="text-sm text-gray-600">Ongoing care to keep landscapes pristine</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#contact" class="inline-flex items-center font-medium text-accent hover:text-accent-dark transition-colors">
+              Learn how we can transform your space
+              <i class="bi bi-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Our Services</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">We offer a comprehensive range of landscaping services to meet all your outdoor and indoor needs.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div class="bg-white rounded-lg shadow-card overflow-hidden transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.pexels.com/photos/3679001/pexels-photo-3679001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Interior Landscaping" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <i class="bi bi-house-heart-fill text-2xl text-accent mr-3"></i>
+                <h3 class="font-heading font-semibold text-xl text-gray-900">Interior Landscaping</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Transform your indoor spaces with beautiful plants and greenery that improve air quality and create a welcoming atmosphere.</p>
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Office plant installations</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Living walls and green dividers</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Indoor garden maintenance</span>
+                </li>
+              </ul>
+              <a href="#contact" class="inline-flex items-center font-medium text-accent hover:text-accent-dark transition-colors">
+                Learn more
+                <i class="bi bi-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Service Card 2 -->
+          <div class="bg-white rounded-lg shadow-card overflow-hidden transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.pexels.com/photos/4503272/pexels-photo-4503272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Exterior Landscaping" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <i class="bi bi-tree-fill text-2xl text-accent mr-3"></i>
+                <h3 class="font-heading font-semibold text-xl text-gray-900">Exterior Landscaping</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Create stunning outdoor spaces that enhance your property's beauty and functionality while increasing its value.</p>
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Garden design and installation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Lawn care and maintenance</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Tree and shrub planting</span>
+                </li>
+              </ul>
+              <a href="#contact" class="inline-flex items-center font-medium text-accent hover:text-accent-dark transition-colors">
+                Learn more
+                <i class="bi bi-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Service Card 3 -->
+          <div class="bg-white rounded-lg shadow-card overflow-hidden transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Hardscaping" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <i class="bi bi-bricks text-2xl text-accent mr-3"></i>
+                <h3 class="font-heading font-semibold text-xl text-gray-900">Hardscaping</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Add structure and function to your landscape with custom hardscape elements that complement your outdoor living space.</p>
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Patios and walkways</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Retaining walls and stone features</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Outdoor kitchens and living areas</span>
+                </li>
+              </ul>
+              <a href="#contact" class="inline-flex items-center font-medium text-accent hover:text-accent-dark transition-colors">
+                Learn more
+                <i class="bi bi-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Service Card 4 -->
+          <div class="bg-white rounded-lg shadow-card overflow-hidden transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="400">
+            <img src="https://images.pexels.com/photos/840111/pexels-photo-840111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Soft Scaping" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <i class="bi bi-flower1 text-2xl text-accent mr-3"></i>
+                <h3 class="font-heading font-semibold text-xl text-gray-900">Soft Scaping</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Enhance your landscape with carefully selected plants, flowers, and greenery that bring color and life to your outdoor spaces.</p>
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Plant selection and arrangement</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Seasonal flower beds</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Native plant installations</span>
+                </li>
+              </ul>
+              <a href="#contact" class="inline-flex items-center font-medium text-accent hover:text-accent-dark transition-colors">
+                Learn more
+                <i class="bi bi-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Service Card 5 -->
+          <div class="bg-white rounded-lg shadow-card overflow-hidden transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="500">
+            <img src="https://images.pexels.com/photos/3769579/pexels-photo-3769579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Earth Works" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <i class="bi bi-tools text-2xl text-accent mr-3"></i>
+                <h3 class="font-heading font-semibold text-xl text-gray-900">Earth Works</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Prepare your property for landscaping with professional earth works and ground preparation services.</p>
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Land clearing and grading</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Drainage solutions</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Soil preparation and amendment</span>
+                </li>
+              </ul>
+              <a href="#contact" class="inline-flex items-center font-medium text-accent hover:text-accent-dark transition-colors">
+                Learn more
+                <i class="bi bi-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Service Card 6 -->
+          <div class="bg-white rounded-lg shadow-card overflow-hidden transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://images.pexels.com/photos/4963307/pexels-photo-4963307.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Landscape Consultation" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <i class="bi bi-clipboard-data-fill text-2xl text-accent mr-3"></i>
+                <h3 class="font-heading font-semibold text-xl text-gray-900">Consultation</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Get expert advice and custom design plans for your landscaping project from our experienced professionals.</p>
+              <ul class="mb-6 space-y-2">
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Site analysis and assessment</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Custom landscape design</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-dot text-accent text-xl mr-1"></i>
+                  <span class="text-gray-700">Project planning and budgeting</span>
+                </li>
+              </ul>
+              <a href="#contact" class="inline-flex items-center font-medium text-accent hover:text-accent-dark transition-colors">
+                Learn more
+                <i class="bi bi-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Our Gallery</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">Explore our portfolio of stunning landscaping projects that showcase our expertise and creativity.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+            <img src="https://images.pexels.com/photos/6461182/pexels-photo-6461182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Residential Garden" class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://images.pexels.com/photos/2132009/pexels-photo-2132009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Commercial Landscape" class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+            <img src="https://images.pexels.com/photos/1060801/pexels-photo-1060801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Patio Design" class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+            <img src="https://images.pexels.com/photos/977913/pexels-photo-977913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Water Feature" class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+            <img src="https://images.pexels.com/photos/5864264/pexels-photo-5864264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Indoor Plants" class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+            <img src="https://images.pexels.com/photos/8311472/pexels-photo-8311472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Garden Pathway" class="w-full h-64 object-cover rounded-lg shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+          </div>
+        </div>
+        
+        <!-- Gallery Modal -->
+        <div id="galleryModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+          <button id="closeGallery" class="absolute top-6 right-6 text-white text-3xl hover:text-gray-300 focus:outline-none">
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <button id="prevImage" class="absolute left-4 text-white text-4xl hover:text-gray-300 focus:outline-none">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <img id="modalImage" class="max-w-full max-h-[80vh] object-contain" src="" alt="Gallery Image">
+          <button id="nextImage" class="absolute right-4 text-white text-4xl hover:text-gray-300 focus:outline-none">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">What Our Clients Say</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">Read testimonials from our satisfied clients who have experienced the InnovEnviroSH difference.</p>
+        </div>
+        
+        <div class="relative testimonials-slider" data-aos="fade-up">
+          <div class="testimonial-container overflow-hidden">
+            <div class="testimonials-track flex transition-transform duration-500">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] px-4">
+                <div class="bg-white p-8 rounded-lg shadow-card h-full">
+                  <div class="flex mb-4 text-accent">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="text-gray-600 italic mb-6">"InnovEnviroSH completely transformed our backyard into a stunning oasis. Their attention to detail and creative design exceeded our expectations. Now we enjoy spending time outdoors more than ever!"</p>
+                  <div class="flex items-center">
+                    <div class="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                      <i class="bi bi-person-fill text-gray-600 text-xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-heading font-medium text-gray-900">Sarah Johnson</h4>
+                      <p class="text-sm text-gray-500">Residential Client</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 2 -->
+              <div class="testimonial-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] px-4">
+                <div class="bg-white p-8 rounded-lg shadow-card h-full">
+                  <div class="flex mb-4 text-accent">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="text-gray-600 italic mb-6">"We hired InnovEnviroSH to redesign the landscaping for our office building. They not only created a beautiful outdoor space but also improved our indoor environment with strategic plant placement. Our employees love it!"</p>
+                  <div class="flex items-center">
+                    <div class="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                      <i class="bi bi-person-fill text-gray-600 text-xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-heading font-medium text-gray-900">Michael Carter</h4>
+                      <p class="text-sm text-gray-500">Business Owner</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 3 -->
+              <div class="testimonial-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] px-4">
+                <div class="bg-white p-8 rounded-lg shadow-card h-full">
+                  <div class="flex mb-4 text-accent">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="text-gray-600 italic mb-6">"The team at InnovEnviroSH is professional, punctual, and truly skilled at what they do. They installed a beautiful patio and garden for our restaurant that has become a highlight for our customers. Highly recommend!"</p>
+                  <div class="flex items-center">
+                    <div class="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                      <i class="bi bi-person-fill text-gray-600 text-xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-heading font-medium text-gray-900">Jennifer Lopez</h4>
+                      <p class="text-sm text-gray-500">Restaurant Owner</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 4 -->
+              <div class="testimonial-slide min-w-full sm:min-w-[50%] lg:min-w-[33.333%] px-4">
+                <div class="bg-white p-8 rounded-lg shadow-card h-full">
+                  <div class="flex mb-4 text-accent">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                  <p class="text-gray-600 italic mb-6">"We've been using InnovEnviroSH for our property maintenance for three years now, and they consistently deliver exceptional service. Our grounds have never looked better, and they're always responsive to our needs."</p>
+                  <div class="flex items-center">
+                    <div class="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                      <i class="bi bi-person-fill text-gray-600 text-xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-heading font-medium text-gray-900">Robert Williams</h4>
+                      <p class="text-sm text-gray-500">Property Manager</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="testimonial-prev absolute top-1/2 -left-4 -translate-y-1/2 bg-white text-primary p-2 rounded-full shadow-md hover:bg-gray-100 focus:outline-none z-10">
+            <i class="bi bi-chevron-left text-xl"></i>
+          </button>
+          <button class="testimonial-next absolute top-1/2 -right-4 -translate-y-1/2 bg-white text-primary p-2 rounded-full shadow-md hover:bg-gray-100 focus:outline-none z-10">
+            <i class="bi bi-chevron-right text-xl"></i>
+          </button>
+        </div>
+        
+        <!-- Testimonial Dots -->
+        <div class="flex justify-center space-x-2 mt-8">
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none active" data-index="0"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="1"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="2"></button>
+          <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before and After Section -->
+    <section id="before-after" class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Before & After</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">See the dramatic transformations we've created for our clients.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Before & After 1 -->
+          <div class="before-after-container" data-aos="fade-right">
+            <h3 class="font-heading font-semibold text-xl text-gray-900 mb-4">Backyard Transformation</h3>
+            <div class="relative before-after-wrapper overflow-hidden rounded-lg shadow-card">
+              <img class="before-image w-full" src="https://images.pexels.com/photos/5825589/pexels-photo-5825589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Before">
+              <div class="after-image-container absolute top-0 left-0 h-full overflow-hidden">
+                <img class="after-image w-full h-full object-cover" src="https://images.pexels.com/photos/5825575/pexels-photo-5825575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="After">
+              </div>
+              <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize"></div>
+              <div class="slider-button absolute top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md cursor-ew-resize z-10">
+                <i class="bi bi-arrows-angle-expand text-primary"></i>
+              </div>
+              <div class="before-label absolute top-4 left-4 bg-gray-900/70 text-white py-1 px-3 rounded-md text-sm">Before</div>
+              <div class="after-label absolute top-4 right-4 bg-accent/90 text-white py-1 px-3 rounded-md text-sm">After</div>
+            </div>
+          </div>
+          
+          <!-- Before & After 2 -->
+          <div class="before-after-container" data-aos="fade-left">
+            <h3 class="font-heading font-semibold text-xl text-gray-900 mb-4">Front Yard Makeover</h3>
+            <div class="relative before-after-wrapper overflow-hidden rounded-lg shadow-card">
+              <img class="before-image w-full" src="https://images.pexels.com/photos/280132/pexels-photo-280132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="Before">
+              <div class="after-image-container absolute top-0 left-0 h-full overflow-hidden">
+                <img class="after-image w-full h-full object-cover" src="https://images.pexels.com/photos/355296/pexels-photo-355296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="After">
+              </div>
+              <div class="slider-handle absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize"></div>
+              <div class="slider-button absolute top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md cursor-ew-resize z-10">
+                <i class="bi bi-arrows-angle-expand text-primary"></i>
+              </div>
+              <div class="before-label absolute top-4 left-4 bg-gray-900/70 text-white py-1 px-3 rounded-md text-sm">Before</div>
+              <div class="after-label absolute top-4 right-4 bg-accent/90 text-white py-1 px-3 rounded-md text-sm">After</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-24 bg-cta-pattern bg-cover bg-center">
+      <div class="absolute inset-0 bg-primary/80"></div>
+      <div class="relative container mx-auto px-4 md:px-8 text-center" data-aos="fade-up">
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mb-6">Ready to Transform Your Space?</h2>
+        <p class="text-gray-100 max-w-3xl mx-auto mb-8 text-lg">Contact us today to schedule a consultation and discover how our landscaping services can enhance your property.</p>
+        <a href="#contact" class="inline-block bg-white hover:bg-gray-100 text-primary font-semibold py-3 px-8 rounded-md transition-all">
+          Get Started
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Contact Us</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto">Have questions or ready to start your project? Reach out to us for a consultation.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div data-aos="fade-right">
+            <div class="bg-white rounded-lg shadow-card p-8">
+              <h3 class="font-heading font-semibold text-2xl text-gray-900 mb-6">Send Us a Message</h3>
+              
+              <form id="contactForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                      required
+                    >
+                  </div>
+                  <div>
+                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                      required
+                    >
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    required
+                  >
+                </div>
+                
+                <div>
+                  <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
+                  <select 
+                    id="service" 
+                    name="service" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    required
+                  >
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="interior">Interior Landscaping</option>
+                    <option value="exterior">Exterior Landscaping</option>
+                    <option value="hardscaping">Hardscaping</option>
+                    <option value="softscaping">Soft Scaping</option>
+                    <option value="earthworks">Earth Works</option>
+                    <option value="consultation">Consultation</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    required
+                  ></textarea>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  class="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-all w-full md:w-auto"
+                >
+                  Send Message
+                </button>
+              </form>
+              
+              <div id="formSuccess" class="hidden mt-6 p-4 bg-success/10 border border-success text-success rounded-md">
+                <p class="font-medium">Thanks for reaching out! We'll be in touch with you shortly.</p>
+              </div>
+              
+              <div id="formError" class="hidden mt-6 p-4 bg-error/10 border border-error text-error rounded-md">
+                <p class="font-medium">There was an error submitting your message. Please try again later.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div data-aos="fade-left">
+            <div class="bg-gray-100 rounded-lg p-8 h-full">
+              <h3 class="font-heading font-semibold text-2xl text-gray-900 mb-6">Contact Information</h3>
+              
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-accent/10 p-3 rounded-md mr-4">
+                    <i class="bi bi-geo-alt-fill text-accent text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-heading font-medium text-gray-900 mb-1">Our Location</h4>
+                    <p class="text-gray-600">123 Landscape Way, Greenville, CA 91234</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-accent/10 p-3 rounded-md mr-4">
+                    <i class="bi bi-telephone-fill text-accent text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-heading font-medium text-gray-900 mb-1">Phone Number</h4>
+                    <p class="text-gray-600">(555) 123-4567</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-accent/10 p-3 rounded-md mr-4">
+                    <i class="bi bi-envelope-fill text-accent text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-heading font-medium text-gray-900 mb-1">Email Address</h4>
+                    <p class="text-gray-600">info@innovenvirosh.com</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-accent/10 p-3 rounded-md mr-4">
+                    <i class="bi bi-clock-fill text-accent text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-heading font-medium text-gray-900 mb-1">Business Hours</h4>
+                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p class="text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
+                    <p class="text-gray-600">Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-8">
+                <h4 class="font-heading font-medium text-gray-900 mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                  <a href="#" class="bg-primary hover:bg-primary-dark text-white p-3 rounded-full transition-all">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="#" class="bg-primary hover:bg-primary-dark text-white p-3 rounded-full transition-all">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a href="#" class="bg-primary hover:bg-primary-dark text-white p-3 rounded-full transition-all">
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                  <a href="#" class="bg-primary hover:bg-primary-dark text-white p-3 rounded-full transition-all">
+                    <i class="bi bi-pinterest"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center mb-6">
+            <i class="bi bi-tree-fill text-2xl mr-2 text-accent"></i>
+            <span class="font-heading font-bold text-xl">InnovEnviroSH</span>
+          </div>
+          <p class="text-gray-300 mb-6">Creating beautiful landscapes and outdoor living spaces for over 15 years. We transform ordinary spaces into extraordinary environments.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-accent transition-colors">
+              <i class="bi bi-pinterest"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-heading font-semibold text-lg mb-6">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#about" class="text-gray-300 hover:text-accent transition-colors">About Us</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-accent transition-colors">Our Services</a></li>
+            <li><a href="#gallery" class="text-gray-300 hover:text-accent transition-colors">Gallery</a></li>
+            <li><a href="#testimonials" class="text-gray-300 hover:text-accent transition-colors">Testimonials</a></li>
+            <li><a href="#before-after" class="text-gray-300 hover:text-accent transition-colors">Before & After</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-accent transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-heading font-semibold text-lg mb-6">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#services" class="text-gray-300 hover:text-accent transition-colors">Interior Landscaping</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-accent transition-colors">Exterior Landscaping</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-accent transition-colors">Hardscaping</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-accent transition-colors">Soft Scaping</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-accent transition-colors">Earth Works</a></li>
+            <li><a href="#services" class="text-gray-300 hover:text-accent transition-colors">Consultation</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-heading font-semibold text-lg mb-6">Newsletter</h3>
+          <p class="text-gray-300 mb-4">Subscribe to our newsletter for landscaping tips and updates.</p>
+          <form class="space-y-4">
+            <div>
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-white"
+                required
+              >
+            </div>
+            <button 
+              type="submit" 
+              class="bg-accent hover:bg-accent-dark text-white font-medium py-2 px-4 rounded-md transition-all w-full"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; 2025 InnovEnviroSH. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 right-6 bg-primary hover:bg-primary-dark text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity z-40">
+    <i class="bi bi-arrow-up text-xl"></i>
+  </button>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
