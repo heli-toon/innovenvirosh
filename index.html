@@ -13,6 +13,16 @@
   <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body class="font-sans text-gray-800 overflow-x-hidden">
+  <div id="loader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+    <div class="loader-content text-center">
+      <div class="animate-bounce mb-4">
+        <i class="bi bi-tree-fill text-4xl text-accent"></i>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
   <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-4 md:px-8">
       <nav class="flex items-center justify-between py-4">

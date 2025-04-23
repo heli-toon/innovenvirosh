@@ -6,8 +6,33 @@ import { initBeforeAfter } from './before-after.js';
 import { initTestimonials } from './testimonials.js';
 import { initContactForm } from './contact.js';
 
+function initLoader() {
+  const loader = document.getElementById('loader');
+  
+  if (!loader) return;
+  // Simulate loading progress
+  const progress = loader.querySelector('.loader-progress');
+  let width = 0;
+  const interval = setInterval(() => {
+    if (width >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 300);
+      }, 500);
+    } else {
+      width += Math.random() * 30;
+      if (width > 100) width = 100;
+      progress.style.width = width + '%';
+    }
+  }, 500);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize all components
+  initLoader();
   initNavbar();
   initParallax();
   initAnimations();
