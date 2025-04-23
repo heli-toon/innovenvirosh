@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - InnovEnviroSH</title>
+  <meta name="description" content="Learn about InnovEnviroSH's mission, values, and approach to creating sustainable landscapes.">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="font-sans text-gray-800">
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 bg-white z-100 flex items-center justify-center">
+    <div class="loader-content text-center">
+      <div class="animate-bounce mb-4">
+        <i class="bi bi-tree-fill text-4xl text-accent"></i>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-primary">
+    <div class="container mx-auto px-4 md:px-8">
+      <nav class="flex items-center justify-between py-4">
+        <a href="/" class="flex items-center text-white">
+          <i class="bi bi-tree-fill text-2xl mr-2 text-accent"></i>
+          <span class="font-heading font-bold text-xl md:text-2xl">InnovEnviroSH</span>
+        </a>
+        
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="/" class="text-white hover:text-accent transition-colors font-medium">Home</a>
+          <a href="/#services" class="text-white hover:text-accent transition-colors font-medium">Services</a>
+          <a href="/#gallery" class="text-white hover:text-accent transition-colors font-medium">Gallery</a>
+          <a href="/#contact" class="text-white hover:text-accent transition-colors font-medium">Contact</a>
+          <a href="/appointment.html" class="bg-accent hover:bg-accent-dark text-white font-medium py-2 px-6 rounded-md transition-all">Book Appointment</a>
+        </div>
+        
+        <button id="mobileMenuBtn" class="lg:hidden text-white text-2xl focus:outline-none">
+          <i class="bi bi-list"></i>
+        </button>
+      </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden bg-primary hidden">
+      <div class="container mx-auto px-4 py-6 space-y-4">
+        <a href="/" class="block text-white hover:text-accent transition-colors font-medium py-2">Home</a>
+        <a href="/about.html" class="block text-accent font-medium py-2">About</a>
+        <a href="/#services" class="block text-white hover:text-accent transition-colors font-medium py-2">Services</a>
+        <a href="/#gallery" class="block text-white hover:text-accent transition-colors font-medium py-2">Gallery</a>
+        <a href="/#contact" class="block text-white hover:text-accent transition-colors font-medium py-2">Contact</a>
+        <a href="/appointment.html" class="block bg-accent hover:bg-accent-dark text-white font-medium py-2 px-6 rounded-md transition-all w-full text-center mt-4">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gray-900 text-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="font-heading font-bold text-4xl md:text-5xl mb-6" data-aos="fade-up">Who We Are</h1>
+          <p class="text-gray-300 text-lg md:text-xl" data-aos="fade-up" data-aos-delay="100">
+            Transforming spaces into sustainable, beautiful environments that inspire and endure.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <img src="https://images.pexels.com/photos/4503751/pexels-photo-4503751.jpeg" alt="Team working on landscape design" class="rounded-lg shadow-lg w-full">
+          </div>
+          <div data-aos="fade-left">
+            <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-6">Our Story</h2>
+            <p class="text-gray-600 mb-6">Founded in 2010, InnovEnviroSH began with a simple mission: to create harmonious landscapes that blend nature's beauty with human needs. Our journey started with small residential projects, but our commitment to excellence and sustainable practices quickly earned us recognition in the industry.</p>
+            <p class="text-gray-600">Today, we're proud to be a leading force in innovative landscaping solutions, serving both residential and commercial clients across the region. Our team has grown to include certified horticulturists, landscape architects, and skilled craftsmen, all united by our passion for creating extraordinary outdoor spaces.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Our Approach</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">We believe in creating landscapes that not only look beautiful but also contribute positively to the environment and our clients' well-being.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg p-8 shadow-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+              <i class="bi bi-flower1 text-3xl text-accent"></i>
+            </div>
+            <h3 class="font-heading font-semibold text-xl text-gray-900 mb-4">Sustainable Design</h3>
+            <p class="text-gray-600">We create landscapes that thrive in local conditions while minimizing environmental impact through smart resource management and native plant selection.</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-8 shadow-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+              <i class="bi bi-gear-fill text-3xl text-accent"></i>
+            </div>
+            <h3 class="font-heading font-semibold text-xl text-gray-900 mb-4">Innovation</h3>
+            <p class="text-gray-600">By combining traditional landscaping principles with modern technology and techniques, we deliver solutions that are both beautiful and functional.</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-8 shadow-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-accent/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+              <i class="bi bi-people-fill text-3xl text-accent"></i>
+            </div>
+            <h3 class="font-heading font-semibold text-xl text-gray-900 mb-4">Client Partnership</h3>
+            <p class="text-gray-600">We work closely with our clients throughout the entire process, ensuring their vision is realized while providing expert guidance and support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Our Leadership Team</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">Meet the experts who lead our innovative landscaping solutions.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative mb-6 inline-block">
+              <img src="https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg" alt="Sarah Johnson" class="w-48 h-48 rounded-full object-cover mx-auto">
+              <div class="absolute bottom-0 right-0 bg-accent text-white p-2 rounded-full">
+                <i class="bi bi-tree-fill"></i>
+              </div>
+            </div>
+            <h3 class="font-heading font-semibold text-xl text-gray-900 mb-2">Sarah Johnson</h3>
+            <p class="text-accent font-medium mb-4">Founder & Lead Designer</p>
+            <p class="text-gray-600">With over 12 years of experience in landscape architecture and sustainable design.</p>
+          </div>
+
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative mb-6 inline-block">
+              <img src="https://images.pexels.com/photos/8961065/pexels-photo-8961065.jpeg" alt="Michael Chen" class="w-48 h-48 rounded-full object-cover mx-auto">
+              <div class="absolute bottom-0 right-0 bg-accent text-white p-2 rounded-full">
+                <i class="bi bi-gear-fill"></i>
+              </div>
+            </div>
+            <h3 class="font-heading font-semibold text-xl text-gray-900 mb-2">Michael Chen</h3>
+            <p class="text-accent font-medium mb-4">Technical Director</p>
+            <p class="text-gray-600">Specializes in irrigation systems and sustainable technology integration.</p>
+          </div>
+
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative mb-6 inline-block">
+              <img src="https://images.pexels.com/photos/8506365/pexels-photo-8506365.jpeg" alt="Emily Martinez" class="w-48 h-48 rounded-full object-cover mx-auto">
+              <div class="absolute bottom-0 right-0 bg-accent text-white p-2 rounded-full">
+                <i class="bi bi-flower1"></i>
+              </div>
+            </div>
+            <h3 class="font-heading font-semibold text-xl text-gray-900 mb-2">Emily Martinez</h3>
+            <p class="text-accent font-medium mb-4">Horticulture Specialist</p>
+            <p class="text-gray-600">Expert in native plant species and sustainable gardening practices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+      <div class="container mx-auto px-4 md:px-8 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mb-6" data-aos="fade-up">Ready to Transform Your Space?</h2>
+          <p class="text-gray-200 mb-8" data-aos="fade-up" data-aos-delay="100">Let's work together to create a landscape that reflects your vision and enhances your environment.</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="/appointment.html" class="bg-accent hover:bg-accent-dark text-white font-medium py-3 px-8 rounded-md transition-all">Book a Consultation</a>
+            <a href="/#contact" class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-8 rounded-md transition-all">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <i class="bi bi-tree-fill text-2xl mr-2 text-accent"></i>
+          <span class="font-heading font-bold text-xl">InnovEnviroSH</span>
+        </div>
+        <p class="text-gray-400">&copy; 2025 InnovEnviroSH. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/src/js/about.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment - InnovEnviroSH</title>
+  <meta name="description" content="Schedule a consultation with InnovEnviroSH's landscaping experts.">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <div id="loader" class="fixed inset-0 bg-white z-100 flex items-center justify-center">
+    <div class="loader-content text-center">
+      <div class="animate-bounce mb-4">
+        <i class="bi bi-tree-fill text-4xl text-accent"></i>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="container mx-auto px-4 md:px-8">
+        <nav class="flex items-center justify-between py-4">
+          <a href="/" class="flex items-center text-white">
+            <i class="bi bi-tree-fill text-2xl mr-2 text-accent"></i>
+            <span class="font-heading font-bold text-xl md:text-2xl">InnovEnviroSH</span>
+          </a>
+          
+          <div class="hidden lg:flex items-center space-x-8">
+            <a href="/#about" class="text-white hover:text-accent transition-colors font-medium">About</a>
+            <a href="/#services" class="text-white hover:text-accent transition-colors font-medium">Services</a>
+            <a href="/#gallery" class="text-white hover:text-accent transition-colors font-medium">Gallery</a>
+            <a href="/#testimonials" class="text-white hover:text-accent transition-colors font-medium">Testimonials</a>
+            <a href="/#before-after" class="text-white hover:text-accent transition-colors font-medium">Before & After</a>
+          </div>
+          
+          <button id="mobileMenuBtn" class="lg:hidden text-white text-2xl focus:outline-none">
+            <i class="bi bi-list"></i>
+          </button>
+        </nav>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="lg:hidden bg-primary hidden">
+        <div class="container mx-auto px-4 py-6 space-y-4">
+          <a href="/#about" class="block text-white hover:text-accent transition-colors font-medium py-2">About</a>
+          <a href="/#services" class="block text-white hover:text-accent transition-colors font-medium py-2">Services</a>
+          <a href="/#gallery" class="block text-white hover:text-accent transition-colors font-medium py-2">Gallery</a>
+          <a href="/#testimonials" class="block text-white hover:text-accent transition-colors font-medium py-2">Testimonials</a>
+          <a href="/#before-after" class="block text-white hover:text-accent transition-colors font-medium py-2">Before & After</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden bg-primary hidden">
+      <div class="container mx-auto px-4 py-6 space-y-4">
+        <a href="/" class="block text-white hover:text-accent transition-colors font-medium py-2">Home</a>
+        <a href="/#about" class="block text-white hover:text-accent transition-colors font-medium py-2">About</a>
+        <a href="/#services" class="block text-white hover:text-accent transition-colors font-medium py-2">Services</a>
+        <a href="/#gallery" class="block text-white hover:text-accent transition-colors font-medium py-2">Gallery</a>
+        <a href="/#contact" class="block text-white hover:text-accent transition-colors font-medium py-2">Contact</a>
+        <a href="/appointment.html" class="block bg-accent hover:bg-accent-dark text-white font-medium py-2 px-6 rounded-md transition-all w-full text-center mt-4">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24 pb-20">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h1 class="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Book an Appointment</h1>
+          <p class="text-gray-600">Schedule a consultation with our landscaping experts to discuss your project.</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-card p-6 md:p-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Calendar Section -->
+            <div>
+              <h2 class="font-heading font-semibold text-xl text-gray-900 mb-4">Select Date & Time</h2>
+              
+              <div class="calendar-container mb-6">
+                <div class="flex items-center justify-between mb-4">
+                  <button id="prevMonth" class="text-gray-600 hover:text-primary focus:outline-none">
+                    <i class="bi bi-chevron-left text-xl"></i>
+                  </button>
+                  <h3 id="currentMonth" class="font-medium text-lg"></h3>
+                  <button id="nextMonth" class="text-gray-600 hover:text-primary focus:outline-none">
+                    <i class="bi bi-chevron-right text-xl"></i>
+                  </button>
+                </div>
+                
+                <div class="grid grid-cols-7 gap-1">
+                  <div class="text-center text-sm font-medium text-gray-600 py-2">Sun</div>
+                  <div class="text-center text-sm font-medium text-gray-600 py-2">Mon</div>
+                  <div class="text-center text-sm font-medium text-gray-600 py-2">Tue</div>
+                  <div class="text-center text-sm font-medium text-gray-600 py-2">Wed</div>
+                  <div class="text-center text-sm font-medium text-gray-600 py-2">Thu</div>
+                  <div class="text-center text-sm font-medium text-gray-600 py-2">Fri</div>
+                  <div class="text-center text-sm font-medium text-gray-600 py-2">Sat</div>
+                </div>
+                
+                <div id="calendarDays" class="grid grid-cols-7 gap-1"></div>
+              </div>
+              
+              <div class="time-slots">
+                <h3 class="font-medium text-gray-900 mb-3">Available Time Slots</h3>
+                <div id="timeSlots" class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  <!-- Time slots will be populated by JavaScript -->
+                </div>
+              </div>
+            </div>
+            
+            <!-- Appointment Form -->
+            <div>
+              <h2 class="font-heading font-semibold text-xl text-gray-900 mb-4">Your Information</h2>
+              
+              <form id="appointmentForm" class="space-y-4">
+                <div>
+                  <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    required
+                  >
+                </div>
+                
+                <div>
+                  <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    required
+                  >
+                </div>
+                
+                <div>
+                  <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    required
+                  >
+                </div>
+                
+                <div>
+                  <label for="service" class="block text-gray-700 font-medium mb-2">Service Type</label>
+                  <select 
+                    id="service" 
+                    name="service" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                    required
+                  >
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="consultation">Initial Consultation</option>
+                    <option value="design">Landscape Design</option>
+                    <option value="maintenance">Maintenance Service</option>
+                    <option value="installation">Installation Service</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label for="notes" class="block text-gray-700 font-medium mb-2">Additional Notes</label>
+                  <textarea 
+                    id="notes" 
+                    name="notes" 
+                    rows="3" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
+                  ></textarea>
+                </div>
+                
+                <div class="pt-4">
+                  <button 
+                    type="submit" 
+                    class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-all"
+                  >
+                    Book Appointment
+                  </button>
+                </div>
+              </form>
+              
+              <div id="appointmentSuccess" class="hidden mt-6 p-4 bg-success/10 border border-success text-success rounded-md">
+                <p class="font-medium">Your appointment has been scheduled successfully!</p>
+                <p class="text-sm mt-1">We'll send you a confirmation email shortly.</p>
+              </div>
+              
+              <div id="appointmentError" class="hidden mt-6 p-4 bg-error/10 border border-error text-error rounded-md">
+                <p class="font-medium">There was an error scheduling your appointment.</p>
+                <p class="text-sm mt-1">Please try again or contact us directly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <i class="bi bi-tree-fill text-2xl mr-2 text-accent"></i>
+          <span class="font-heading font-bold text-xl">InnovEnviroSH</span>
+        </div>
+        <p class="text-gray-400">&copy; 2025 InnovEnviroSH. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/appointment.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

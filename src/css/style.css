@@ -9,7 +9,10 @@ html {
 body {
   overflow-x: hidden;
 }
-
+::selection{
+  background-color: theme('colors.accent.DEFAULT');
+  color: #fff;
+}
 /* Loader Styles */
 .loader-content {
   width: 100px;
