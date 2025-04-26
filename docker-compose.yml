@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "1234:1234"
+    container_name: innovenvirosh-web
