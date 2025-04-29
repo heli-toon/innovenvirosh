@@ -29,7 +29,6 @@ function initLoader() {
     }
   }, 500);
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize all components
   initLoader();
@@ -63,7 +62,6 @@ function initNavbar() {
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
   }
-
   // Mobile menu toggle
   mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
@@ -89,7 +87,6 @@ function initNavbar() {
     });
   });
 }
-
 // Back to top button functionality
 function initBackToTop() {
   const backToTopBtn = document.getElementById('backToTop');
