@@ -74,9 +74,13 @@ body {
   opacity: 1;
   transform: translateY(0) translateX(0) scale(1);
 }
-/* Hero */
-#hero {
-  background-image: url('../../images/hero.jpg')
+#bg1, #bg2 {
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
 }
 /* Before-After Slider Styles */
 .before-after-wrapper {

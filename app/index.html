@@ -61,9 +61,16 @@
 
   <main>
     <!-- Hero Section -->
-    <section id="hero" class="relative h-screen bg-hero-pattern bg-cover bg-center overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-primary/60"></div>
-      <div class="relative h-full flex flex-col items-center justify-center px-6">
+    <section id="hero" class="relative h-screen overflow-hidden">
+      <!-- Dynamic background layers -->
+      <div id="bg1" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100 z-0"></div>
+      <div id="bg2" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 z-0"></div>
+    
+      <!-- Gradient overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-primary/60 z-10"></div>
+    
+      <!-- Main content -->
+      <div class="relative z-20 h-full flex flex-col items-center justify-center px-6">
         <div class="testimonials-slider w-full max-w-6xl mx-auto" data-aos="fade-up">
           <div class="testimonial-container overflow-hidden w-full">
             <div class="testimonials-track flex w-full transition-transform duration-500 ease-in-out">
@@ -161,7 +168,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
           <!-- Navigation Buttons -->
@@ -172,8 +178,8 @@
             <i class="bi bi-chevron-right text-xl"></i>
           </button>
         </div>
-        <!-- Testimonial Dots -->
-        <div class="flex justify-center space-x-2 mt-8 ">
+        <!-- Dots -->
+        <div class="flex justify-center space-x-2 mt-8">
           <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none active" data-index="0" title="0"></button>
           <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="1" title="1"></button>
           <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="2" title="2"></button>
@@ -181,12 +187,15 @@
           <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 focus:outline-none" data-index="4" title="4"></button>
         </div>
       </div>
+    
+      <!-- Bottom wave -->
       <div class="absolute bottom-0 left-0 right-0">
         <svg class="fill-white w-full h-auto border-white" viewBox="0 0 1920 120" xmlns="http://www.w3.org/2000/svg">
           <path d="M0,120 L1920,120 L1920,0 C1200,80 720,80 0,0 L0,120 Z" />
         </svg>
       </div>
     </section>
+    
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
@@ -812,5 +821,45 @@
   </button>
 
   <script type="module" src="/src/js/main.js"></script>
+  <script>
+    const images = [
+      'images/hero.jpg',
+      'images/11.jpg',
+      'images/14.jpg',
+      'images/13.webp',
+      'images/15.jpg'
+    ];
+  
+    const bg1 = document.getElementById('bg1');
+    const bg2 = document.getElementById('bg2');
+  
+    let current = 0;
+    let showingBg1 = true;
+  
+    // Set initial image
+    bg1.style.backgroundImage = `url(${images[0]})`;
+  
+    setInterval(() => {
+      const nextIndex = (current + 1) % images.length;
+      const nextImage = `url(${images[nextIndex]})`;
+  
+      if (showingBg1) {
+        bg2.style.backgroundImage = nextImage;
+        bg2.classList.remove('opacity-0');
+        bg2.classList.add('opacity-100');
+        bg1.classList.remove('opacity-100');
+        bg1.classList.add('opacity-0');
+      } else {
+        bg1.style.backgroundImage = nextImage;
+        bg1.classList.remove('opacity-0');
+        bg1.classList.add('opacity-100');
+        bg2.classList.remove('opacity-100');
+        bg2.classList.add('opacity-0');
+      }
+  
+      showingBg1 = !showingBg1;
+      current = nextIndex;
+    }, 5000);
+  </script>  
 </body>
 </html>
