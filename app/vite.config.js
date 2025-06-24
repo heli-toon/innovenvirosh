@@ -1,33 +1,30 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
-  // Project root directory
   root: './',
-  
-  // Base public path
   base: '/',
-  
-  // Development server configuration
   server: {
     port: 3000,
     open: true,
     cors: true,
   },
-  
-  // Build output configuration
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
     minify: true,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
+        contact: resolve(__dirname, 'appointment.html'),      
+      }
+    }
   },
-  
-  // CSS configurations
   css: {
     devSourcemap: true,
   },
-  
-  // Alias configurations
   resolve: {
     alias: {
       '@': '/src',
