@@ -6,6 +6,45 @@ import { initBeforeAfter } from './before-after.js';
 import { initTestimonials } from './testimonials.js';
 import { initContactForm } from './contact.js';
 
+const images = [
+  '/images/hero.jpg',
+  '/images/11.jpg',
+  '/images/14.jpg',
+  '/images/13.webp',
+  '/images/15.jpg'
+];
+
+const bg1 = document.getElementById('bg1');
+const bg2 = document.getElementById('bg2');
+
+let current = 0;
+let showingBg1 = true;
+
+// Set initial image
+bg1.style.backgroundImage = `url(${images[0]})`;
+
+setInterval(() => {
+  const nextIndex = (current + 1) % images.length;
+  const nextImage = `url(${images[nextIndex]})`;
+
+  if (showingBg1) {
+    bg2.style.backgroundImage = nextImage;
+    bg2.classList.remove('opacity-0');
+    bg2.classList.add('opacity-100');
+    bg1.classList.remove('opacity-100');
+    bg1.classList.add('opacity-0');
+  } else {
+    bg1.style.backgroundImage = nextImage;
+    bg1.classList.remove('opacity-0');
+    bg1.classList.add('opacity-100');
+    bg2.classList.remove('opacity-100');
+    bg2.classList.add('opacity-0');
+  }
+
+  showingBg1 = !showingBg1;
+  current = nextIndex;
+}, 5000);
+
 function initLoader() {
   const loader = document.getElementById('loader');
   
